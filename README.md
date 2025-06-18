@@ -102,6 +102,3 @@ curl -X DELETE http://localhost:3000/api/subscriptions/<donorId>
 - This project is for simulation/demo purposes only (no real payment processing).
 - All data is stored in memory and will reset when the server restarts.
 - The LLM service is mocked for assignment purposes.
-
----
-**Happy Coding!** 🎉
