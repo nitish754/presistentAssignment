@@ -25,21 +25,21 @@ src/
   __tests__/           # Jest/Supertest tests
 ```
 
-## 🐳 Running with Docker
+## 🐳 Running with Docker Compose
 
-### 1. Build the Docker image
+### 1. Build and start the app
 ```bash
-docker build -t express-ts-payments .
-```
-
-### 2. Run the container
-```bash
-docker run -p 3000:3000 --env-file env.example express-ts-payments
+docker-compose up --build
 ```
 - The API will be available at [http://localhost:3000](http://localhost:3000)
 
-### 3. Environment Variables
-- See `env.example` for configuration options (e.g., `PORT`, etc.)
+### 2. Environment Variables
+- The container uses `env.example` for configuration (see file for options).
+
+### 3. Stopping the app
+```bash
+docker-compose down
+```
 
 ## 🧪 Running Tests (Locally)
 ```bash
@@ -95,7 +95,7 @@ curl -X DELETE http://localhost:3000/api/subscriptions/<donorId>
 - [x] Joi validation middleware
 - [x] In-memory storage for all data
 - [x] All endpoints tested with Jest + Supertest
-- [x] Dockerfile for containerization
+- [x] Dockerfile & docker-compose for containerization
 - [x] README with clear instructions
 
 ## ℹ️ Notes
